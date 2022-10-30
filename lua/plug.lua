@@ -9,7 +9,6 @@ return require("packer").startup(function()
 	-- to manage lsp services
 	use 'williamboman/mason.nvim'    
 	use 'williamboman/mason-lspconfig.nvim'
-	require("mason").setup()
 	
 	use 'neovim/nvim-lspconfig'
 	use 'simrat39/rust-tools.nvim'
@@ -28,9 +27,14 @@ return require("packer").startup(function()
 	use 'hrsh7th/cmp-buffer'                            
 	use 'hrsh7th/vim-vsnip'                             
 
+	-- indent blankline 
+	use "lukas-reineke/indent-blankline.nvim"
 	-- treesitter 
 	use 'nvim-treesitter/nvim-treesitter'
 
+	-- rainbow treesitter plugin
+	use 'p00f/nvim-ts-rainbow' 	
+	
 	-- tree , neotree
 	use {
   		'nvim-tree/nvim-tree.lua',
@@ -53,5 +57,3 @@ return require("packer").startup(function()
 	
 	-- other plugin
 end)
-
-

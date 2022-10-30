@@ -124,6 +124,13 @@ cmp.setup({
   },
 })
 
+---------------------
+--- PLUGINS SETUP ---
+---------------------
+
+require("mason").setup()
+
+
 -- Treesitter Plugin Setup 
 require('nvim-treesitter.configs').setup {
   ensure_installed = { "lua", "rust", "toml" },
