@@ -2,7 +2,6 @@
 vim.cmd [[packadd packer.nvim]]
 
 return require("packer").startup(function()
-	
 	-- colorscheme
 	use 'ellisonleao/gruvbox.nvim'
 
@@ -39,7 +38,7 @@ return require("packer").startup(function()
 	use {
   		'nvim-tree/nvim-tree.lua',
   		requires = {
-    		'nvim-tree/nvim-web-devicons', -- optional, for file icons
+    			'nvim-tree/nvim-web-devicons', -- optional, for file icons
   		},
   		tag = 'nightly' -- optional, updated every week. (see issue #1193)
 	}
@@ -49,6 +48,23 @@ return require("packer").startup(function()
     		config = function()
         		require('Comment').setup()
     		end
+	}
+
+	-- changing vim-surround
+	-- quick view cs <oldvalue> <newvalue>
+	-- also works with rs remove surreanding
+	use 'tpope/vim-surround'
+
+
+	use {
+		"windwp/nvim-autopairs",
+    		config = function() 
+			require("nvim-autopairs").setup {}
+		end
+		--config = function() require("autopairs").setup {}
+		--end
+
+		
 	}
 
 	-- vimspector + codelldb for debugging
